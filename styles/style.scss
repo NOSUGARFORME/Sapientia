@@ -23,7 +23,7 @@ a {
 }
 
 header {
-    height: 29.04px;
+    height: 29px;
     display: flex;
     justify-content: space-between;
     margin: 45px 0 25px;
@@ -73,62 +73,64 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    h1 {
-        width: 671px;
-        color: #FFFFFF;
-        font-family: Montserrat;
-        font-size: 56px;
-        font-weight: 700;
-    }
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 450px;
 
-    span {
-        color: #FFF;
-        font-family: DM Sans;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 25px; /* 125% */
-        width: 488px; 
-        display: block;
-    }
-}
-
-.banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 450px;
+        .banner-header {
+            width: 671px;
+            color: #FFFFFF;
+            font-family: Montserrat;
+            font-size: 56px;
+            font-weight: 700;
+        }
     
-    a {
-        display: block;
-        width: 173px;
-        background: #FFF;
-        color: #154444;
-        font-family: DM Sans;
-        font-size: 20px;
-        text-align: center;
-        padding: 0.5em;
-
-        font-style: italic;
+        .banner-text {
+            color: #FFF;
+            font-family: DM Sans;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 25px; /* 125% */
+            width: 488px; 
+            display: block;
+        }
+        
+        .banner-link {
+            display: block;
+            width: 173px;
+            background: #FFF;
+            color: #154444;
+            font-family: DM Sans;
+            font-size: 20px;
+            text-align: center;
+            padding: 0.5em;
+    
+            font-style: italic;
+        }
     }
-}
 
-.banner-images {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .banner-image {
-        background-color: #fff;
+    .banner-images {
         height: 100%;
-        width: 400px;
-        object-fit: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .banner-image {
+            background-color: #fff;
+            height: 100%;
+            width: 400px;
+            object-fit: cover;
+        }
     }
 }
+
+
 
 .contact-section {
-    ul {
+    .contact-list {
         list-style-type: none;
         overflow: hidden;
 

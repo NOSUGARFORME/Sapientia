@@ -22,7 +22,7 @@ a {
 }
 
 header {
-  height: 29.04px;
+  height: 29px;
   display: flex;
   justify-content: space-between;
   margin: 45px 0 25px;
@@ -67,14 +67,20 @@ header ul li {
   justify-content: space-between;
   align-items: center;
 }
-.banner h1 {
+.banner .banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+}
+.banner .banner-content .banner-header {
   width: 671px;
   color: #FFFFFF;
   font-family: Montserrat;
   font-size: 56px;
   font-weight: 700;
 }
-.banner span {
+.banner .banner-content .banner-text {
   color: #FFF;
   font-family: DM Sans;
   font-size: 20px;
@@ -83,14 +89,7 @@ header ul li {
   width: 488px;
   display: block;
 }
-
-.banner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 450px;
-}
-.banner-content a {
+.banner .banner-content .banner-link {
   display: block;
   width: 173px;
   background: #FFF;
@@ -101,15 +100,14 @@ header ul li {
   padding: 0.5em;
   font-style: italic;
 }
-
-.banner-images {
+.banner .banner-images {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.banner-images .banner-image {
+.banner .banner-images .banner-image {
   background-color: #fff;
   height: 100%;
   width: 400px;
@@ -117,7 +115,7 @@ header ul li {
      object-fit: cover;
 }
 
-.contact-section ul {
+.contact-section .contact-list {
   list-style-type: none;
   overflow: hidden;
   display: flex;
@@ -160,4 +158,4 @@ header ul li {
 }
 .card .card-text::first-line {
   font-weight: 700;
-}/*# sourceMappingURL=style.css.map */
+}
