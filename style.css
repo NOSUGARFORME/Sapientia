@@ -1,0 +1,27 @@
+.blue-text {
+  color: blue;
+}
+
+p + h2 {
+  color: red;
+}
+
+div p {
+  font-weight: bold;
+}
+
+p + span {
+  font-style: italic;
+}
+
+div p span {
+  text-decoration: underline;
+}
+
+#front .innodom {
+  background-color: yellow;
+}
+
+.innodom {
+  border: 1px solid black;
+}
