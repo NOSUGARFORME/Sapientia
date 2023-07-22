@@ -1,0 +1,17 @@
+.list {
+  list-style-type: symbols(cyclic "\1F921");
+}
+
+.list li:nth-child(1) {
+  color: blue;
+  text-shadow: 2px 1px 1px pink;
+}
+
+.list li:nth-child(2) {
+  background-color: blue;
+  color: white;
+}
+
+.list li:nth-child(3) {
+  text-decoration: line-through 2px pink;
+}
