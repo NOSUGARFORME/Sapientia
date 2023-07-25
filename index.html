@@ -1,108 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Discover the power of self-assurance with the optimistic statement 'I am confident that I will undoubtedly improve tomorrow.' Embrace the anticipation of personal growth and positive transformation in this inspiring declaration."
-    />
-    <title>Ivan Bolsun - Frontend InnoDom</title>
-    <style>
-      .form {
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-      }
-    </style>
-  </head>
-  <body>
-    <form class="form" action="/some/path/to/reg/handler" method="post">
-      <label for="name">
-        Name
-        <input type="text" id="name" required minlength="2" />
-      </label>
-      <label for="surname">
-        Surname
-        <input type="text" id="surname" required maxlength="20" />
-      </label>
-      <label for="email">
-        Email
-        <input type="email" id="email" required />
-      </label>
-      <label for="phone">
-        Phone
-        <input
-          type="text"
-          pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-          id="phone"
-          required
-        />
-      </label>
-      <label for="password">
-        Password
-        <input type="password" id="password" required />
-      </label>
-      <div>
-      <span>Gender</span>
-        <label for="male">
-          <input type="radio" id="male" name="gender" required />
-          M
-        </label>
-        <label for="female">
-          <input type="radio" id="female" name="gender" />
-          F
-        </label>
-      </div>
-      <label for="country">
-        Country
-        <select name="country" id="country">
-          <option value="InnoDom">InnoDom</option>
-          <option value="value1">Value 1</option>
-          <option value="value2">Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
-      </label>
-      <label for="agreebment">
-        <input type="checkbox" name="agreebment" id="agreebment" required />
-        I agree with something
-      </label>
-      <div>
-        <input type="submit" name="signup" id="signup" value="Sign up" />
-        <input type="reset" name="reset" id="reset" value="Reset" />
-      </div>
-    </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the power of self-assurance with the optimistic statement 'I am confident that I will undoubtedly improve tomorrow.' Embrace the anticipation of personal growth and positive transformation in this inspiring declaration.">
+    <title>Ivan Bolsun</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <a href="/" class="logo">IvanBolsun</a>
+                <ul class="header-list">
+                    <li class="header-list-item"><a class="header-link link" href="index.html">Home</a></li>
+                    <li class="header-list-item"><a class="header-link link" href="information.html">Information</a></li>
+                    <li class="header-list-item"><a class="header-link link" href="contact.html">Contact</a></li>
+                </ul>
+        </header>
+    </div>
+    
+    <div class="container">
+        <section class="banner">
+            <div class="banner-images">
+                <img src="assets/photo.jpg" alt="" class="banner-image">
+                <img src="assets/photo1.jpg" alt="" class="banner-image">
+            </div>
+            <div class="banner-content">
+                <h1 class="banner-header">Explore Your Passions: Embrace the Joy of Hobbies!</h1>
+                <span class="banner-text">Welcome to our vibrant hobby community! Discover and embrace your passions with engaging articles, helpful tutorials, and inspiring stories from hobbyists worldwide.</span>
+                <a class="banner-link" href="information.html">Explore More</a>
+            </div>
+        </section>
+    </div>
 
-    <br />
-
-    <form class="form" action="/path/to/send/form" action="post">
-      <label for="range">
-        Range
-        <input type="range" name="range" id="range" />
-      </label>
-      <label for="country-additional">
-        Country
-        <select name="country-additional" id="country-additional">
-          <option value="InnoDom">InnoDom</option>
-          <option value="value1">Value 1</option>
-          <option value="value2">Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
-      </label>
-      <label for="agreebment-additional">
-        <input
-          type="checkbox"
-          name="agreebment-additional"
-          id="agreebment-additional"
-          required
-        />
-        I agree with something
-      </label>
-      <div>
-        <input type="submit" id="signup-additional" value="Sign up" />
-        <input type="reset" id="reset-additional" value="Reset" />
-        <input type="file" id="file-additional" />
-      </div>
-    </form>
-  </body>
+    <div class="container"><a href="#" class="link">Go up</a></div>
+</body>
 </html>
