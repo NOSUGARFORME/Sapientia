@@ -2,7 +2,9 @@
   color: blue;
 }
 
-p + h2 {
+/* This doesn't work because <h2> is a block-level element, and <p> is an inline-level element. 
+Block-level elements cannot be nested inside inline-level elements */
+p h2 {
   color: red;
 }
 
