@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
@@ -12,23 +13,18 @@ body {
     height: 1000px;
 }
 
-a {
-    text-decoration: none;
-    line-height: 30px;
-}
-
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
-header {
+.header {
     height: 29px;
     display: flex;
     justify-content: space-between;
     margin: 45px 0 25px;
 
-    ul {
+    .header-list {
         list-style-type: none;
         overflow: hidden;
 
@@ -37,7 +33,7 @@ header {
         align-items: center;
         gap: 50px;
 
-        li {
+        .header-list-item {
             height: 100%;
         }
     }    
