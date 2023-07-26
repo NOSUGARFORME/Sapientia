@@ -1,29 +1,17 @@
-.list {
-  list-style-type: symbols(cyclic "\1F921");
+.first-img {
+  float: left;
+
+  width: 250px;
 }
 
-.list li:nth-child(1) {
-  color: blue;
-  text-shadow: 2px 1px 1px pink;
+.second-img {
+  float: right;
+
+  width: 350px;
 }
 
-.list li:nth-child(2) {
-  background-color: blue;
-  color: white;
-}
+.content {
+  height: 300px;
 
-.list li:nth-child(3) {
-  text-decoration: line-through 2px pink;
-}
-
-.header {
-  background-color: #000;
-  color: #fff;
-  text-align: right;
-
-  margin-top: 10px;
-}
-
-.header-text {
-  padding: 2px;
+  overflow: scroll;
 }
