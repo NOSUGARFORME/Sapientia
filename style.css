@@ -1,29 +1,25 @@
-.blue-text {
-  color: blue;
+.first-img {
+  float: left;
+
+  width: 250px;
 }
 
-/* This doesn't work because <h2> is a block-level element, and <p> is an inline-level element. 
-Block-level elements cannot be nested inside inline-level elements */
-p h2 {
-  color: red;
+.second-img {
+  float: right;
+
+  width: 350px;
 }
 
-div p {
-  font-weight: bold;
+.content {
+  height: 300px;
+
+  overflow: scroll;
 }
 
-p + span {
-  font-style: italic;
-}
+.venus-img {
+  shape-outside: circle();
+  float: left;
 
-div p span {
-  text-decoration: underline;
-}
-
-#front .innodom {
-  background-color: yellow;
-}
-
-.innodom {
-  border: 1px solid black;
+  width: 300px;
+  height: 300px;
 }
