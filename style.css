@@ -89,3 +89,16 @@
   width: 100vw;
   height: 10vh;
 }
+
+:root {
+  --title-color: #fff;
+  --title-background-color: #000fff;
+  --title-border-color: #4751ff;
+}
+
+.title {
+  color: var(--title-color);
+  background-color: var(--title-background-color);
+  border: var(--title-border-color) 20px solid;
+  width: max-content;
+}
