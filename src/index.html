@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ivan Bolsun</title>
-    <link rel="stylesheet" href="../style.css" />
-</head>
+<html lang="en">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
 
-<body>
-    <div class="content">
-        <div class="header">header</div>
-        <div class="information">information</div>
-        <div class="ad">ad</div>
-        <div class="nav">nav</div>
-        <div class="footer">footer</div>
+      <main class="page">
+
+        <div class="page__container">
+          @@include('html/mainPage.html')  
+        </div>
+
+      </main>
+
+      @@include('html/footer.html')
     </div>
 
-    <div class="flex-content">
-        <div class="header">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="boxes">
-            <div class="first-block"></div>
-            <div class="second-block"></div>
-        </div>
-        <div class="footer"></div>
-    </div>
-
-    <h1 class="title">INNODOM</h1>
-
-</body>
-
+    @@include('html/script.html')
+  </body>
 </html>

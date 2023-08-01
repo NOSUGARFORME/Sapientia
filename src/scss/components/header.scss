@@ -1,0 +1,57 @@
+.header {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+
+  padding: 44px 0 27px;
+
+  .header-is-sticky & {
+    position: fixed;
+    background-color: #007aff;
+  }
+
+  // .header__container
+  &__container {
+    height: rem($headerHeight);
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    .header-is-sticky & {
+      height: rem($headerHeight - 50);
+    }
+  }
+
+  &__logo {
+    color: $mainColor;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__buttons {
+    width: 78px;
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__search {
+    background-color: $whiteColor;
+  }
+
+  &__burger {
+    background-color: $whiteColor;
+  }
+
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+}
