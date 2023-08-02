@@ -1,25 +1,82 @@
-.first-img {
-  float: left;
+:root {
+  --light-blue: #7f6eff;
+  --green: #00871b;
+  --blue: #0000ff;
+  --pink: #ffc0cb;
 
-  width: 250px;
 }
 
-.second-img {
-  float: right;
+.square {
+  padding: 10px 20px;
 
-  width: 350px;
+  width: fit-content;
+  
+  background-color: rgb(30, 0, 255);
+
+  transition: padding 2s 0.5s;
 }
 
-.content {
-  height: 300px;
-
-  overflow: scroll;
+.square:hover {
+  padding: 10px 200px;
 }
 
-.venus-img {
-  shape-outside: circle();
-  float: left;
-
+.container {
+  position: relative;
   width: 300px;
-  height: 300px;
+  height: 200px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  animation: colors 10s, move 10s;
+
+  background-color: var(--light-blue);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: calc(100% - 50px); 
+    left: calc(50% - 25px); 
+  }
+  50% {
+    top: 0;
+    left: calc(100% - 50px);
+  }
+  75% {
+    top: calc(100% - 50px); 
+    left: calc(50% - 25px); 
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes colors {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    background-color: var(--light-blue);
+  }
+
+  10%, 90% {
+    background-color: var(--green);
+  }
+  
+  30%, 70% {
+    background-color: var(--blue);
+  }
+
+  50% {
+    background-color: var(--pink);
+  }
 }
