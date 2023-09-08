@@ -1,3 +1,111 @@
+// Loops
+const number = +prompt("Введите число от 1 до 10");
+for (let x = 0; x < number; x++) {
+    console.log(x);
+}
+
+let i = 1;
+while(i < 10) {
+    console.log(i)
+    i += 2;
+}
+
+for(i = 0; i < 10; i += 2) {
+    console.log(i);
+}
+
+const drawPyramid = (lines) => {
+  for (let i = 1; i <= lines; i++) {
+    let spaces = ' '.repeat(lines - i);
+    let hashes = '#'.repeat(2 * i - 1);
+    console.log(spaces + hashes);
+  }
+}
+  
+let lines = prompt("Введите количество строк (от 1 до 9):");
+lines = parseInt(lines);
+  
+if (lines >= 1 && lines <= 9) {
+  drawPyramid(lines);
+} else {
+  console.log("Введите корректное значение от 1 до 9.");
+}
+
+const squareRange = (number) => {
+    for (let i = 1; i <= number; i++) {
+        console.log(i ** 2);
+    }
+}
+
+const factorial = (n) => {
+    let res = 1, i;
+    for (i = 2; i <= n; i++)
+        res *= i;
+    return res;
+}
+
+const factorialRange = (n) => {
+    for (let i = 1; i < n; i++) {
+        console.log(factorial(i));
+    }
+}
+
+const fib = (n) => {
+    const sqrt5 = Math.sqrt(5);
+    const gr = (1 + sqrt5) / 2;
+    return Math.round((1 / sqrt5) * (Math.pow(gr, n) - Math.pow(1 - gr, n)));
+}
+
+const fibRange = (m) => {
+    for (let n = 1; n < m; n++) {
+        console.log(fib(n));
+    }
+}
+
+let numb = prompt("Введите число (от 1 до 10):");
+numb = parseInt(numb);
+  
+if (numb >= 1 && numb <= 10) {
+    console.log("Возведение в квадрат:");
+    squareRange(numb);
+    
+    console.log("Факториал:");
+    factorialRange(numb);
+    
+    console.log("Фибоначчи:");
+    fibRange(numb);
+} else {
+  console.log("Введите корректное значение от 1 до 10.");
+}
+
+const drawRomb = (lines) => {
+    
+    const pyramidHeight = Math.floor(lines / 2) + 1;
+
+    for (let i = 1; i <= pyramidHeight; i++) {
+      const hashs = '#'.repeat(2 * i - 1);
+      const stars = '*'.repeat((2 * pyramidHeight - 1 - hashs.length) / 2 + 1);
+      console.log(stars + hashs + stars);
+    }
+
+    for (let i = pyramidHeight - 1; i >= 1; i--) {
+      const hashs = '#'.repeat(2 * i - 1);
+      const stars = '*'.repeat((2 * pyramidHeight - 1 - hashs.length) / 2 + 1);
+      console.log(stars + hashs + stars);
+    }
+  
+}
+
+const linesInput = prompt("Введите нечетное число от 1 до 9");
+lines = parseInt(linesInput);
+
+if (lines % 2 === 0 || lines < 1 || lines > 9) {
+  console.log('Вы ввели некорректное значение');
+} else { 
+  drawRomb(lines);
+}
+
+// Functions
 const sayHello = () => console.log("Hello, world");
 
 const getSquare = (num) => num ** 2;
