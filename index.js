@@ -60,3 +60,11 @@ const calculator = function () {
         console.error(`Ошибка: ${error.message}`);
     }
 }
+
+((a, b, c) => console.log(a ** 2 + b ** 2 + c ** 2))(2, 3, 4);
+
+((a, b) => console.log(a * b))(2, 3);
+
+const generator = (n) => Array.from({length: n}, (_, index) => index + 1);
+
+const generatorOdd = (n) => Array.from({length: n}, (_, index) => index + 1).filter(x => x % 2);
