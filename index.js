@@ -105,6 +105,47 @@ if (lines % 2 === 0 || lines < 1 || lines > 9) {
   drawRomb(lines);
 }
 
+outerloopfor: for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        if (j === 3) {
+            break outerloopfor; // This will break out of the outer loop when j equals 3.
+        }
+        console.log(`i = ${i}, j = ${j}`);
+    }
+}
+
+i = 1;
+outerloopwhile: while (i <= 5) {
+    let j = 1;
+    while (j <= 5) {
+        if (j === 3) {
+            j++; 
+            continue outerloopwhile;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    }
+    i++;
+}
+
+{
+    outerloop: for (let i = 1; i <= 3; i++) {
+        middleloop: while (i <= 3) {
+            innerloop: do {
+                if (i === 2) {
+                    i++; // Skip iteration of the middleloop when i equals 2.
+                    continue middleloop;
+                }
+                if (i === 3) {
+                    break outerloop; // Break out of the outerloop when i equals 3.
+                }
+                console.log(`i = ${i}`);
+                i++;
+            } while (false); // This do-while loop runs only once.
+        }
+    }
+}
+
 // Functions
 const sayHello = () => console.log("Hello, world");
 
