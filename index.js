@@ -1,3 +1,96 @@
+// Logical expressions
+const inputNumber = +prompt("Введите число:");
+if (inputNumber % 2 === 0) alert("Число четное");
+
+const textInput = prompt("Введите язык программирования, на котором Вы работаете:");
+const backendLanguages = ["python", "java", "c++"];
+const fronedLanguages = ["javascript", "js"];
+if (backendLanguages.includes(textInput.toLowerCase())) {
+    alert("Вы backedер!");
+} else if (fronedLanguages.includes(textInput.toLowerCase())) {
+    alert("Вы frontendер!");
+} else {
+    alert("Я не знаю кто Вы");
+}
+
+textInput = prompt("Enter the language you are currently speaking:").toLowerCase();
+switch (textInput) {
+    case "russian":
+        alert("Привет");
+        break;
+    case "english":
+        alert("Heloo");
+        break;
+    case "italian":
+        alert("Ciao");
+        break;
+    case "spanish":
+        alert("Hola");
+        break;
+    case "french":
+        alert("Salut");
+        break;
+    default:
+        alert("Sorry, I don't know this language");
+        break;
+}
+
+if(textInput === "russian") alert("Привет")
+else if (textInput === "english") alert("Hello")
+else if (textInput === "italian") alert("Ciao")
+else if (textInput === "spanish") alert("Hola")
+else if (textInput === "french") alert("Salut")
+else alert("Sorry, I don't know this language");
+
+const klava = () => {
+    while (textInput != "пока") {
+        textInput = prompt("Диалог с Клавой").toLowerCase();
+        switch (textInput) {
+            case "как тебя зовут?":
+                alert("Клава");
+                break;
+            case "как у тебя дела?":
+                alert("Хорошо, а у тебя?");
+                break;
+            case "сколько тебе лет?":
+                alert("Много-много");
+                break;
+            case "пока":
+                return;
+        
+            default:
+                alert("Я еще не знаю таких слов");
+                break;
+        }
+    }
+}
+
+klava();
+
+const err = () => {
+    try {
+        textInput = +prompt("Enter any text");
+    } catch (error) {
+        throw new CustomError("проброс ошибки");
+    } finally {
+        alert("it's a conclusion either way")
+    }
+}
+
+try {
+    err();
+}
+catch (error) {
+    console.error(error.name);
+}
+
+class CustomError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "customError";
+    }
+}
+
 // Loops
 const number = +prompt("Введите число от 1 до 10");
 for (let x = 0; x < number; x++) {
