@@ -168,6 +168,14 @@ legend {
     font-size: 6vw;
   }
 
+  .first-image {
+    filter: blur(10px);
+  }
+
+  .second-image {
+    filter:hue-rotate(90deg);
+  }
+
 @media (max-width: 600px) {
     .wrapper {
         justify-content: center;
