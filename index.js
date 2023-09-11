@@ -1,3 +1,37 @@
+// Strings
+let str = "inodm";
+console.log(str[0], str[2], str[3]);
+
+const num = 3;
+console.log(str[num]);
+
+console.log(str[str.length - 2]);
+
+str = "12543";
+console.log(str.split("").reduce((sum, char) => sum + +char, 0));
+
+let regex = /\b[iI][nN]*[iI]\b/g;
+str = "ii ini inni innni inoi inmi";
+console.log(str.match(regex));
+
+str = 'aAXa aeffa aGha aza ax23a a3sSa';
+regex = /\b[a][a-z]*[a]\b/g;
+
+const str1 = "inno";
+const str2 = "Dom";
+
+const result = str2.charAt(0).toUpperCase() + str2.slice(1) + str1;
+
+console.log(result); // "DomInno"
+
+regex = /\b[iI](.*?)*[iI]\b/g;
+str = "ii ini inni innni inoi inmi";
+console.log(str.match(regex));
+
+const reverseStr = str => str.split('').reverse().join('');
+console.log(reverseStr("innoDom"));
+
+
 // Logical expressions
 const inputNumber = +prompt("Введите число:");
 if (inputNumber % 2 === 0) alert("Число четное");
