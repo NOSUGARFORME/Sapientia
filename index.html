@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ivan Bolsun</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+         #time-info {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +43,42 @@
         </div>
     </main>
 
+    <div id="time-info">
+        <h1>Your Local Time</h1>
+        <p id="time-zone"></p>
+        <p id="local-time"></p>
+        <p id="portion-of-day"></p>
+    </div>
+
     <script src="index.js"></script>
+
+    <script>
+        function displayLocalTime() {
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const now = new Date();
+            const options = { timeZoneName: 'short' };
+            const formattedTime = now.toLocaleTimeString('en-US', options);
+            const portionOfDay = getPortionOfDay(now.getHours());
+
+            document.getElementById('time-zone').textContent = `Time Zone: ${timeZone}`;
+            document.getElementById('local-time').textContent = `Local Time: ${formattedTime}`;
+            document.getElementById('portion-of-day').textContent = `You are in the ${portionOfDay}.`;
+
+            setTimeout(displayLocalTime, 1000);
+        }
+
+        function getPortionOfDay(hour) {
+            if (hour < 12) {
+                return 'morning';
+            } else if (hour < 18) {
+                return 'afternoon';
+            } else {
+                return 'evening';
+            }
+        }
+
+        displayLocalTime();
+    </script>
 </body>
 
 </html>
