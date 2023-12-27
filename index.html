@@ -5,80 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ivan Bolsun</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-         #time-info {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header__wrapper wrapper">
-            <img class="header__logo" src="./assets/logo.png" alt="logo">
-
-            <div class="header__links">
-                <a class="header__link" href="/">о нас</a>
-                <a class="header__link" href="/">контакты</a>
-                <a class="header__link" href="/">сообщество</a>
-            </div>
-            
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="main__wrapper wrapper">
-            <img class="main__image first-image" src="./assets/image.jpg" alt="">
-
-            <div class="main__content">
-                <p class="main__text">Станьте частью<br>сообщества</p>
-                <p class="main__title">InnoDom</p>
-            </div>
-
-            <img class="main__image second-image" src="./assets/image.jpg" alt="">
-        </div>
-    </main>
-
-    <div id="time-info">
-        <h1>Your Local Time</h1>
-        <p id="time-zone"></p>
-        <p id="local-time"></p>
-        <p id="portion-of-day"></p>
+    <div>
+        <button id="btn">My button</button>
+        <p id="text">Some text to change color</p>
     </div>
 
     <script src="index.js"></script>
-
-    <script>
-        function displayLocalTime() {
-            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            const now = new Date();
-            const options = { timeZoneName: 'short' };
-            const formattedTime = now.toLocaleTimeString('en-US', options);
-            const portionOfDay = getPortionOfDay(now.getHours());
-
-            document.getElementById('time-zone').textContent = `Time Zone: ${timeZone}`;
-            document.getElementById('local-time').textContent = `Local Time: ${formattedTime}`;
-            document.getElementById('portion-of-day').textContent = `You are in the ${portionOfDay}.`;
-
-            setTimeout(displayLocalTime, 1000);
-        }
-
-        function getPortionOfDay(hour) {
-            if (hour < 12) {
-                return 'morning';
-            } else if (hour < 18) {
-                return 'afternoon';
-            } else {
-                return 'evening';
-            }
-        }
-
-        displayLocalTime();
-    </script>
 </body>
 
 </html>
