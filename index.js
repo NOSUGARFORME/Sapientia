@@ -1510,3 +1510,99 @@ class Triangle extends AbstractShape {
     return this.side1 + this.side2 + this.side3;
   }
 }
+
+
+String.prototype.toString = function() {
+  return this.split('').reverse().join('');
+}
+
+function reverseString(str) {
+  return str;
+}
+
+class Car {
+  constructor() {
+    this.engine = new Engine();
+    this.body = new Body();
+  }
+
+  startEngine() {
+    this.engine.start();
+  }
+
+  openBody() {
+    this.body.open();
+  }
+}
+
+class Engine {
+  start() {
+    console.log("Engine started");
+  }
+}
+
+class Body {
+  open() {
+    console.log("Body opened");
+  }
+}
+
+const cCar = new Car();
+cCar.startEngine(); 
+cCar.openBody(); 
+
+class Creator {
+  factoryMethod() {
+    throw new Error("factoryMethod() должен быть переопределен");
+  }
+}
+class CarCreator extends Creator {
+  factoryMethod() {
+    return new Car();
+  }
+}
+
+class BicycleCreator extends Creator {
+  factoryMethod() {
+    return new Bicycle();
+  }
+}
+
+class MotorcycleCreator extends Creator {
+  factoryMethod() {
+    return new Motorcycle();
+  }
+}
+
+class Product {}
+
+class Car extends Product {
+  constructor() {
+    super();
+    console.log("Создан автомобиль");
+  }
+}
+
+class Bicycle extends Product {
+  constructor() {
+    super();
+    console.log("Создан велосипед");
+  }
+}
+
+class Motorcycle extends Product {
+  constructor() {
+    super();
+    console.log("Создан мотоцикл");
+  }
+}
+
+const carCreator = new CarCreator();
+const car = carCreator.factoryMethod(); 
+
+const bicycleCreator = new BicycleCreator();
+const bicycle = bicycleCreator.factoryMethod();
+
+const motorcycleCreator = new MotorcycleCreator();
+const motorcycle = motorcycleCreator.factoryMethod();
+
